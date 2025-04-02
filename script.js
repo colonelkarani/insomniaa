@@ -20,7 +20,7 @@ try {
   const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
 method: "POST",
 headers: {
-"Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+"Authorization": `Bearer ${process.env.API_KEY}`,
       "HTTP-Referer": process.env.SITE_URL || "",
       "X-Title": process.env.SITE_NAME || "",// Optional. Site title for rankings on openrouter.ai.
 "Content-Type": "application/json"
