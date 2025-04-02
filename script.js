@@ -17,7 +17,7 @@ async function sendMessage() {
 // },
 // ;
 try {
-  const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+  const response = await fetch("https://insomnia2-f3ds.onrender.com", {
 method: "POST",
 headers: {
 "Authorization": `Bearer ${process.env.API_KEY}`,
