@@ -20,9 +20,9 @@ try {
   const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
 method: "POST",
 headers: {
-"Authorization": "Bearer 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",
-"HTTP-Referer": "<YOUR_SITE_URL>", // Optional. Site URL for rankings on openrouter.ai.
-"X-Title": "<YOUR_SITE_NAME>", // Optional. Site title for rankings on openrouter.ai.
+"Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      "HTTP-Referer": process.env.SITE_URL || "",
+      "X-Title": process.env.SITE_NAME || "",// Optional. Site title for rankings on openrouter.ai.
 "Content-Type": "application/json"
 },
 body: JSON.stringify({
